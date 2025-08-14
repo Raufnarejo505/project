@@ -5,9 +5,15 @@
   color: var(--color-text-light); /* Changed to your main light text color */
   text-align: center;
 }
+.iconHeader {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-blue-accent);
+  text-align: center;
+}
 
 .mainHeading {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 800;
   margin-bottom: 1.5rem;
   line-height: 1.2;
@@ -49,7 +55,7 @@
 }
 
 .blockTitle {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--color-text-light); /* Changed to your main light text color */
   margin-bottom: 1.5rem;

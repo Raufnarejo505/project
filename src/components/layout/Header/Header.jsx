@@ -6,14 +6,14 @@ import { RiExchangeDollarFill, RiMoneyDollarCircleFill, RiFundsBoxFill, RiCoinFi
 import { MdOutlineSportsScore } from 'react-icons/md';
 
 import StateSelector from './StateSelector.jsx';
-
+import LoginPage from '../../../pages/LoginPage/LoginPage.jsx';
 import logo from '../../../assets/images/oddsjam-logo.png';
 
 const Header = () => {
   const [isToolsOpen, setIsToolsOpen] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const [isStateSelectorOpen, setIsStateSelectorOpen] = useState(false);
-  const [selectedState, setSelectedState] = useState('NJ');
+  const [selectedState, setSelectedState] = useState('Greater London');
   const [isSearchOverlayOpen, setIsSearchOverlayOpen] = useState(false);
 
   const handleDropdownEnter = (setter) => setter(true);
@@ -113,9 +113,13 @@ const Header = () => {
                     />
                 )}
             </div>
-
-            <Button variant="secondary" size="small">Login</Button>
-            <Button variant="secondary" size="small">Try for free</Button>
+            <a
+              href="/login"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="secondary" size="small">Login</Button>
+            </a>
         </div>
       </div>
 

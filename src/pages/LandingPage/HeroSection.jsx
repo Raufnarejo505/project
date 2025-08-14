@@ -7,7 +7,7 @@ import { FaUserCircle, FaChevronDown, FaLock } from 'react-icons/fa'; // Added F
 import { MdOutlineMail } from 'react-icons/md';
 
 const HeroSection = () => {
-    const [selectedState, setSelectedState] = useState('NJ');
+    const [selectedState, setSelectedState] = useState('Greater London');
     const [isStateSelectorOpen, setIsStateSelectorOpen] = useState(false);
 
     const handleStateSelect = (state) => {

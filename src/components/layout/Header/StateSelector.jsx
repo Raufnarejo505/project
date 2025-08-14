@@ -3,13 +3,14 @@ import styles from './StateSelector.module.css';
 import { FaSearch } from 'react-icons/fa'; // Import search icon
 
 const allStates = [ // Renamed to allStates as we'll filter it
-    "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware",
-    "District Of Columbia", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa",
-    "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota",
-    "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico",
-    "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Puerto Rico",
-    "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia",
-    "Washington", "West Virginia", "Wisconsin", "Wyoming"
+"Bedfordshire", "Berkshire", "Bristol", "Buckinghamshire", "Cambridgeshire", "Cheshire", "City of London", 
+"Cornwall", "Cumbria", "Derbyshire", "Devon", "Dorset", "County Durham", "East Riding of Yorkshire", 
+"East Sussex", "Essex", "Gloucestershire", "Greater London", "Greater Manchester", "Hampshire", 
+"Herefordshire", "Hertfordshire", "Isle of Wight", "Kent", "Lancashire", "Leicestershire", "Lincolnshire", 
+"Merseyside", "Norfolk", "North Yorkshire", "Northamptonshire", "Northumberland", "Nottinghamshire", 
+"Oxfordshire", "Rutland", "Shropshire", "Somerset", "South Yorkshire", "Staffordshire", "Suffolk", 
+"Surrey", "Tyne and Wear", "Warwickshire", "West Midlands", "West Sussex", "West Yorkshire", 
+"Wiltshire", "Worcestershire"
 ];
 
 const StateSelector = ({ selectedState, onSelectState, onClose }) => {

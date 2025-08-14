@@ -1,21 +1,31 @@
 // src/App.jsx
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import Header from './components/layout/Header/Header';
 import Footer from './components/layout/Footer/Footer';
-import LandingPage from './pages/LandingPage/LandingPage'; // Ensure this path is correct
+import LandingPage from './pages/LandingPage/LandingPage';
+import LoginPage from './pages/LoginPage/LoginPage';
+import SignupPage from './pages/SignupPage/SignupPage';
 
-// Import global styles and variables
-import './assets/styles/variables.css'; // Make sure this is imported early
-import './assets/styles/global.css'; // If you have a global.css
-import './index.css'; // Your main Tailwind directives import (if used)
+// Global styles
+import './assets/styles/variables.css';
+import './assets/styles/global.css';
+import './index.css';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <LandingPage />
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/signup" element={<SignupPage />} /> {/* Added */}
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
