@@ -7,6 +7,7 @@ export const metadata: Metadata = {
  description:"Sohjhro explores stateful agent environments, verifiable AI evaluation and applied engineering for intelligent systems.",
  metadataBase:new URL("https://www.sohjhro.com"),
  openGraph:{type:"website",siteName:"Sohjhro",locale:"en_US"},
+ icons:{icon:[{url:"/favicon.svg",sizes:"any",type:"image/svg+xml"}],shortcut:"/favicon.svg"},
  robots:{index:true,follow:true},
 };
 export default function RootLayout({children}:{children:React.ReactNode}) {
