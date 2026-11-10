@@ -13,7 +13,7 @@ Private source repository for [sohjhro.com](https://www.sohjhro.com/), an applie
 Requires Node.js 22+ and npm.
 
 ```bash
-npm ci
+npm install
 npm run dev
 npm run lint
 npm run typecheck
@@ -51,4 +51,7 @@ The initial migration preserves existing trusted site-owned HTML in `content/*.t
 The initiative is early-stage. Do not imply products, client results, funding or papers exist until verified. Sohjhro Worlds remains an exploratory concept.
 
 ## Deployment
-The app is statically exported and can deploy to Vercel. Keep production domain assignments in Vercel; do not introduce secret credentials into the repository.
+The app is statically exported and is ready for a Vercel preview. The connected Vercel account currently requires a GitHub Login Connection before automatic deployments can be enabled. Keep www.sohjhro.com on the existing production deployment until a preview is verified.
+
+## Dependency lockfile
+A package-lock.json is not yet included. Generate and commit one with `npm install` from Node 22, then update CI to use `npm ci` for reproducible installs. This is a tracked pre-production requirement.
