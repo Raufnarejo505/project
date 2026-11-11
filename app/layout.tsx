@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import "./globals.css";
@@ -7,9 +7,11 @@ export const metadata: Metadata = {
  description:"Sohjhro explores stateful agent environments, verifiable AI evaluation and applied engineering for intelligent systems.",
  metadataBase:new URL("https://www.sohjhro.com"),
  openGraph:{type:"website",siteName:"Sohjhro",locale:"en_US"},
- icons:{icon:[{url:"/favicon.svg",sizes:"any",type:"image/svg+xml"}],shortcut:"/favicon.svg"},
+ icons:{icon:[{url:"/favicon.ico?v=2",sizes:"any",type:"image/x-icon"},{url:"/favicon.svg?v=2",sizes:"any",type:"image/svg+xml"}],shortcut:"/favicon.ico?v=2"},
+
  robots:{index:true,follow:true},
 };
+export const viewport: Viewport = {themeColor:"#090D1E"};
 export default function RootLayout({children}:{children:React.ReactNode}) {
  return <html lang="en"><body><SiteHeader/><main id="main">{children}</main><SiteFooter/></body></html>;
 }
