@@ -1,27 +1,29 @@
-# Sohjhro identity — Folded Worlds
+# Sohjhro identity — Folded Worlds / Sandstone & Petrol
 
 ## Rationale
-The abstract folded **S** stands for **Sohjhro**. Its overlapping ribbons reflect connected simulated worlds, state changes, iteration, and the translation of research into tools and products. It is a visual metaphor, not a diagram or claim about a released product.
+The geometric folded **S** represents Sohjhro, connected simulated environments, iteration and verifiable AI systems. Its original vector geometry is retained; its colors now follow the unified Sandstone & Petrol brand. Sohjhro is an early-stage independent applied AI research initiative, not a launched product.
 
-## Assets
-- `public/logo-mark.svg` — scalable primary mark, transparent background; suitable for web, documentation and light/dark settings after contrast checks.
-- `public/favicon.svg` — 64 × 64 dark tile with the folded-S mark for browser tabs and bookmarks.
-- Header and footer combine the SVG mark with the accessible text wordmark `sohjhro.`.
+## Core color tokens
+| Role | Hex | Usage |
+| --- | --- | --- |
+| Sandstone background | `#F5EFE3` | Global page background |
+| Porcelain surface | `#FFFBF3` | Cards, light sections and surface layers |
+| Petrol text | `#19353D` | Headlines, body text, dark technical panels and footer |
+| Muted text | `#61767A` | Supporting copy on light surfaces |
+| Primary teal | `#12697B` | Links, focus states, primary actions and top ribbon |
+| Secondary gold | `#E4B56D` | Diagrams, accents and selected logo surfaces |
 
-## Palette
-- **Iris** `#9C85FF` — upper ribbon / exploration.
-- **Indigo** `#6455F5` — structural continuity.
-- **Blue** `#4577F4` — connected workflows.
-- **Cyan** `#10C6E8` — verifiability / insight.
-- **Ink** `#0C1420` — favicon background.
+Supporting tinted values are used for borders, hover states and diagrams where necessary for readability. In dark technical panels, use off-white text and gold accents instead of dark-on-dark text.
 
-The broader website still uses lime accent `#C9FA87` for action elements. Do not change that palette as an incidental logo adjustment.
+## Asset and component usage
+- `public/logo-mark.svg` — primary folded-S logo, transparent background.
+- `public/favicon.svg` and `app/icon.svg` — folded-S mark on petrol background for browser tabs and Next.js.
+- `public/favicon.ico` — legacy-browser raster fallback, refreshed to match the brand.
+- `app/globals.css` — authoritative design tokens and component color rules.
+- `content/*.ts` — original inline SVG diagrams, recolored with teal/petrol/gold for the new palette.
+- `app/layout.tsx` — sandstone browser theme color and versioned favicon references.
 
-## Usage
-Keep the symbol's aspect ratio, give it adequate breathing room, and avoid placing it over detailed imagery. The wordmark should be written **Sohjhro** or **sohjhro.**. Avoid adding unverified business claims to logo lockups.
+Header and footer retain the accessible wordmark `sohjhro.`; decorative SVGs must have empty alt text. Preserve contrast, keyboard focus visibility, and reduced-motion behavior. Keep the brand distinct from claims about launched products or published research.
 
-## Accessibility and collaboration
-In text links, provide an accessible brand name; the decorative icon itself uses empty alt text. Review logo distinctiveness and trademark availability before treating the identity as registered or exclusive. These SVGs are original Sohjhro design assets, based on an exploration of layered geometry.
-
-## Website colors (2026 update)
-Website surfaces now share the logo's violet-to-cyan identity: primary iris `#9C85FF`, supporting sky/cyan `#46D0F1`, deep navy `#090D1E`, and light lavender canvas `#F1F3FF`. The original green accents have been replaced, including inline research schematics. Browser favicons are shipped as `/favicon.svg`, an ICO fallback at `/favicon.ico`, and Next.js app icon metadata; versioned links refresh existing browser caches.
+## Acceptance checks
+Verify the home page, Research, Worlds, Engineering, Company and Contact routes; mobile navigation; concept explorer interactions; contrast on petrol diagram panels; browser tab icon and theme color; lint, typecheck, build and live HTTPS response.
