@@ -14,7 +14,7 @@ export function WorldsExplorer() {
   <h2>One task. Multiple systems. Real consequences inside the simulation.</h2>
   <p>Explore an illustrative scenario specification. The panel below is a concept explorer, not an executable agent or verified benchmark.</p>
  </div><div className="simulator" id="concept-explorer">
-  <div className="sim-toolbar"><span>SOHJHRO WORLDS / DESIGN PREVIEW</span><span style={{color:"var(--accent)"}}>● ILLUSTRATIVE</span></div>
+  <div className="sim-toolbar"><span>SOHJHRO WORLDS / DESIGN PREVIEW</span><span className="sim-status">● ILLUSTRATIVE</span></div>
   <div className="sim-body"><div className="sim-list"><strong>SELECT A SCENARIO</strong>
    {(Object.keys(scenarios) as (keyof typeof scenarios)[]).map(key=><button key={key} type="button" className="sim-choice" aria-pressed={key===selected} onClick={()=>setSelected(key)}>{scenarios[key].name}</button>)}
   </div><div className="sim-content"><div className="eyebrow">SIMULATED AGENT TASK</div>

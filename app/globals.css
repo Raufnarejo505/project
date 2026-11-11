@@ -76,3 +76,136 @@ body{background:var(--bg)}
 ::selection{background:#E4B56D;color:#19353D}
 
 @media(max-width:760px){.site-header{background:rgba(245,239,227,.96)}}
+
+
+/* Accessible dark-on-light / light-on-dark roles for Sandstone & Petrol.
+   Small labels use cream rather than gold: gold on petrol is decorative only. */
+:root {
+  --dark-panel: #12697B;
+  --dark-panel-raised: #19353D;
+  --on-dark: #FFFBF3;
+  --on-dark-muted: #DAE7E3;
+  --dark-panel-edge: rgba(255, 251, 243, .32);
+}
+
+/* Make featured research cards consistently dark (not a mixed light/dark gradient). */
+.research-card,
+.info-panel,
+.math-box,
+.concept-card,
+.simulator {
+  background: var(--dark-panel);
+  color: var(--on-dark);
+  border-color: var(--dark-panel-edge);
+}
+.research-card {
+  background: linear-gradient(155deg, #19353D 0%, #12697B 100%);
+}
+.research-card:hover,
+.info-panel:hover,
+.math-box:hover {
+  border-color: #E4B56D;
+}
+.research-card h3,
+.info-panel h3,
+.math-box strong,
+.concept-card h3,
+.simulator h3,
+.sim-detail b,
+.sim-list strong {
+  color: var(--on-dark);
+}
+.research-card p,
+.info-panel p,
+.math-box p,
+.concept-card p,
+.sim-content .body,
+.concept-disclaimer,
+.sim-checks,
+.sim-detail small,
+.research-card .card-top,
+.sim-toolbar,
+.sim-list strong {
+  color: var(--on-dark-muted);
+}
+.research-card .card-glyph { color: #E4B56D; opacity: .9; }
+.research-card .card-foot,
+.research-card .card-foot a,
+.concept-card .eyebrow,
+.sim-content .eyebrow,
+.math-box .k,
+.sim-toolbar .sim-status {
+  color: var(--on-dark);
+}
+.research-card .card-foot a {
+  text-decoration-color: #E4B56D;
+  text-underline-offset: 5px;
+}
+.concept-card .tag,
+.info-panel .tag,
+.simulator .tag {
+  color: var(--on-dark);
+  border-color: var(--dark-panel-edge);
+}
+.simulator .sim-toolbar {
+  color: var(--on-dark-muted);
+  border-color: var(--dark-panel-edge);
+}
+.simulator .sim-list {
+  background: #174E5C;
+  border-color: var(--dark-panel-edge);
+}
+.simulator .sim-choice {
+  color: var(--on-dark);
+  border-color: transparent;
+}
+.simulator .sim-choice:hover,
+.simulator .sim-choice[aria-pressed="true"] {
+  background: #FFFBF3;
+  color: #19353D;
+  border-color: #E4B56D;
+}
+.simulator .sim-detail {
+  background: var(--dark-panel-raised);
+  border-color: rgba(255, 251, 243, .22);
+}
+.simulator .sim-checks { border-color: var(--dark-panel-edge); }
+
+/* These are intentionally light surfaces; retain strong ink contrast. */
+.visual-shell,
+.orbit-panel,
+.diagram-small,
+.contact-method {
+  color: var(--ink);
+}
+.visual-shell .viz-head,
+.visual-shell .viz-footer,
+.orbit-panel .orbit-caption,
+.section.light .body-copy {
+  color: var(--muted);
+}
+/* Contact banner is sandstone, not a dark green banner. */
+.contact-band { background: var(--bg2); color: var(--ink); }
+.contact-band h2,
+.contact-band p,
+.contact-band .eyebrow { color: var(--ink); }
+.contact-band .btn.dark {
+  background: var(--ink);
+  color: #FFFFFF;
+  border-color: var(--ink);
+}
+.contact-band .btn.dark:hover { background: #12697B; border-color: #12697B; }
+
+/* Keep the dropdown menu on a light surface as the navigation labels are dark. */
+@media(max-width:860px) {
+  .navlinks {
+    background: #FFFBF3;
+    border-bottom: 1px solid var(--edge);
+  }
+  .navlinks a {
+    color: var(--ink);
+    border-color: var(--edge);
+  }
+  .navlinks a:hover,
+  .navlinks a[aria-current="page"] { color: var(--accent); }
+}
