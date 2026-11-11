@@ -2,16 +2,34 @@
 import { useState } from "react";
 type Scenario={name:string;title:string;description:string;tools:string;variation:string;check:string;steps:string[]};
 const scenarios:Record<string,Scenario> = {
- refund:{name:"Refund request",title:"Resolve a billing dispute without issuing a duplicate refund.",description:"An account has a pending cancellation and a previous partial refund. The agent must verify eligibility before changing billing and CRM records.",tools:"CRM · Billing · Helpdesk",variation:"Prior refund exists",check:"No duplicate transaction",steps:["Verify authorized account","Check eligibility and existing transactions","Reconcile final state across systems"]},
- access:{name:"Account access",title:"Restore account access without changing the wrong user.",description:"Two users share similar names across a company workspace. The agent receives an access request but must distinguish identity from display labels and respect the correct role.",tools:"CRM · Identity · Helpdesk",variation:"Ambiguous user records",check:"Only authorized user updated",steps:["Resolve account identity","Enforce role and scope constraints","Detect unrelated permission changes"]},
- policy:{name:"Policy amendment",title:"Apply an updated refund policy to an older support case.",description:"A policy amendment becomes effective after a customer submitted a request. The agent must evaluate the applicable version rather than automatically choosing the newest document.",tools:"Policies · Billing · Helpdesk",variation:"Effective-date conflict",check:"Correct policy version used",steps:["Identify date of request","Select applicable policy version","Verify amount and audit trail"]}
+ repair:{
+  name:"Test repair",title:"Repair a failing test without changing unrelated code.",
+  description:"An agent receives a synthetic repository with a failing unit test. It must identify the cause, make a scoped change and preserve unrelated project state.",
+  tools:"Code sandbox · Test runner · Git diff",variation:"Misleading failure message",
+  check:"Target test passes; unrelated files unchanged",
+  steps:["Inspect the failing test and its dependencies","Apply a minimal patch inside the sandbox","Verify the final diff and test outcomes"]
+ },
+ reproduce:{
+  name:"Experiment replay",title:"Reproduce an experiment with the expected configuration.",
+  description:"A research task references a checkpoint, a dataset split and a configuration. The agent must reproduce the specified run rather than silently substituting different artifacts.",
+  tools:"Experiment runner · Config store · Artifacts",variation:"Stale configuration reference",
+  check:"Correct configuration and artifacts selected",
+  steps:["Resolve the exact run configuration","Execute in a resettable environment","Check the output manifest against the task"]
+ },
+ isolation:{
+  name:"State isolation",title:"Complete a task without leaking state into the next run.",
+  description:"Two evaluation tasks share an environment template. The agent must finish one task without leaving changes that could influence the next agent's result.",
+  tools:"State snapshot · Task runner · Verifier",variation:"Residual files from a prior run",
+  check:"Environment resets to the expected snapshot",
+  steps:["Inspect the initial snapshot","Perform the authorized task","Compare final and reset state independently"]
+ }
 };
 export function WorldsExplorer() {
- const [selected,setSelected] = useState<keyof typeof scenarios>("refund");
+ const [selected,setSelected] = useState<keyof typeof scenarios>("repair");
  const s=scenarios[selected];
  return <section className="section deep"><div className="container"><div className="section-head">
-  <div className="eyebrow">A fictional environment</div>
-  <h2>One task. Multiple systems. Real consequences inside the simulation.</h2>
+  <div className="eyebrow">A synthetic test environment</div>
+  <h2>One task. Multiple tools. Verifiable changes.</h2>
   <p>Explore an illustrative scenario specification. The panel below is a concept explorer, not an executable agent or verified benchmark.</p>
  </div><div className="simulator" id="concept-explorer">
   <div className="sim-toolbar"><span>SOHJHRO WORLDS / DESIGN PREVIEW</span><span className="sim-status">● ILLUSTRATIVE</span></div>
