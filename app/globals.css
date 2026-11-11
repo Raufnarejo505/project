@@ -209,3 +209,45 @@ body{background:var(--bg)}
   .navlinks a:hover,
   .navlinks a[aria-current="page"] { color: var(--accent); }
 }
+
+
+/* Sohjhro research graphics: readable SVG labels and quiet motion. */
+.schematic-graphic{display:block;width:100%;height:auto;overflow:visible}
+.schematic-graphic .schematic-node{transform-box:fill-box;transform-origin:center;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.schematic-graphic .schematic-node:hover{transform:translateY(-4px)}
+.schematic-graphic .schematic-node{animation:schematic-enter .75s ease-out both}
+.schematic-graphic .schematic-node:nth-of-type(2){animation-delay:.12s}
+.schematic-graphic .schematic-node:nth-of-type(3){animation-delay:.24s}
+.schematic-graphic .schematic-node:nth-of-type(4){animation-delay:.36s}
+.schematic-graphic .dashline{stroke-dasharray:7 9;animation:schematic-flow 16s linear infinite}
+.schematic-graphic .pulse{transform-box:fill-box;transform-origin:center;animation:schematic-pulse 4s ease-in-out infinite}
+.schematic-graphic .schematic-ring{transform-origin:275px 178px;animation:schematic-orbit 90s linear infinite}
+.schematic-graphic .schematic-node rect{transition:stroke .35s ease,filter .35s ease}
+.schematic-graphic .schematic-node:hover rect{stroke:#E4B56D;filter:drop-shadow(0 7px 8px rgba(25,53,61,.13))}
+.visual-shell,.orbit-panel,.diagram-small{background:#FFFBF3;border-color:#D8CCBA;box-shadow:0 22px 60px rgba(25,53,61,.07)}
+.visual-shell{background:#FFFBF3;box-shadow:0 28px 80px rgba(25,53,61,.09)}
+.orbit-panel:before{opacity:.14;pointer-events:none}
+.visual-shell .viz-head,.visual-shell .viz-footer,.orbit-panel .orbit-caption{color:#49666C}
+.visual-shell .viz-indicator{color:#12697B}
+@keyframes schematic-enter{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes schematic-flow{to{stroke-dashoffset:-192}}
+@keyframes schematic-pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.47;transform:scale(1.3)}}
+@keyframes schematic-orbit{to{transform:rotate(360deg)}}
+
+/* Related research cards: clean dark panels with light accessible typography. */
+.section.light .section-head p,.section.light .body-copy{color:#61767A}
+.related-work-grid{align-items:stretch}
+.related-work-card{position:relative;isolation:isolate;display:flex;flex-direction:column;min-height:290px;padding:29px 30px;overflow:hidden;border:1px solid #315D64;border-radius:12px;background:#19353D;color:#FFFBF3;box-shadow:0 14px 40px rgba(25,53,61,.09);animation:schematic-enter .65s ease-out both;transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease}
+.related-work-card:nth-child(2){animation-delay:.12s}
+.related-work-card:nth-child(3){animation-delay:.24s}
+.related-work-card:before{content:"";position:absolute;z-index:-1;width:220px;height:220px;top:-115px;right:-90px;border-radius:50%;background:radial-gradient(circle,rgba(228,181,109,.16),transparent 70%);transition:transform .4s ease}
+.related-work-meta{display:flex;justify-content:space-between;gap:10px;color:#E4B56D;font:10px var(--mono);letter-spacing:1.1px}
+.related-work-meta span:last-child{font-size:17px}
+.related-work-card h3{color:#FFFBF3;font:700 30px/1.15 var(--display);letter-spacing:-.055em;margin:35px 0 12px}
+.related-work-card p{color:#DAE7E3;font-size:14px;line-height:1.7;margin:0 0 24px}
+.related-work-card a{display:inline-flex;align-items:center;gap:12px;margin-top:auto;align-self:flex-start;color:#FFFBF3;font-size:13px;font-weight:700;text-decoration:underline;text-underline-offset:6px;text-decoration-color:#E4B56D;transition:color .2s ease,gap .2s ease}
+.related-work-card a:hover{color:#F6D6A4;gap:17px}
+.related-work-card a:focus-visible{outline:3px solid #E4B56D;outline-offset:5px}
+@media(hover:hover){.related-work-card:hover{transform:translateY(-7px);border-color:#E4B56D;box-shadow:0 23px 48px rgba(25,53,61,.17)}.related-work-card:hover:before{transform:scale(1.2)}}
+@media(max-width:570px){.related-work-card{min-height:245px;padding:25px}.schematic-graphic{width:100%;height:auto}}
+@media(prefers-reduced-motion:reduce){.schematic-graphic .schematic-node,.schematic-graphic .dashline,.schematic-graphic .pulse,.schematic-graphic .schematic-ring,.related-work-card{animation:none!important;transition:none!important}.related-work-card:hover,.schematic-graphic .schematic-node:hover{transform:none!important}}
