@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { StaticContent } from "@/components/StaticContent";
+import { ScrollNarrative } from "@/components/ScrollNarrative";
 import { content } from "@/content/home";
 
 export const metadata: Metadata = {
@@ -8,5 +9,6 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <StaticContent html={content} />;
+  const [before, after] = content.split("<!-- SOHJHRO_SCROLL_NARRATIVE -->");
+  return <><StaticContent html={before} /><ScrollNarrative /><StaticContent html={after} /></>;
 }
