@@ -74,3 +74,5 @@ body{background:var(--bg)}
 .research-card,.info-panel,.concept-card,.simulator{border-color:var(--edge)}
 :focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 ::selection{background:#E4B56D;color:#19353D}
+
+@media(max-width:760px){.site-header{background:rgba(245,239,227,.96)}}
