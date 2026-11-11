@@ -1,17 +1,59 @@
 /** Trusted Sohjhro editorial content. Do not insert untrusted HTML. */
 export const content = `
-<section class="hero"><div class="container hero-grid"><div class="hero-copy"><div class="eyebrow">Independent applied AI research initiative</div><h1>Intelligence needs <em>a world</em> to learn from.</h1><p class="lede">As AI moves from answering questions to taking actions, we need better ways to understand its behavior. Sohjhro explores simulation environments, verifiable evaluation and the engineering foundations of reliable agents.</p><div class="hero-actions"><a class="btn" href="/research/">Explore our research thesis <span aria-hidden="true">↗</span></a><a class="btn secondary" href="/worlds/">Discover Worlds concept <span aria-hidden="true">→</span></a></div><div class="small-trust"><span class="status-orb" aria-hidden="true"></span> EARLY-STAGE INITIATIVE · RESEARCH DIRECTIONS IN EXPLORATION</div></div><div class="visual-shell"><div class="viz-head"><span>SOHJHRO / SIMULATED ENVIRONMENT</span><span class="viz-indicator">● CONCEPT SCHEMATIC</span></div><div class="viz-svg">
-<svg class="schematic-graphic schematic-network" viewBox="0 0 550 365" role="img" aria-label="Original diagram illustrating an AI agent acting through connected simulated systems with independent verification">
-<defs><linearGradient id="circleGlow" x1="0" x2="1"><stop stop-color="#E4B56D"/><stop offset="1" stop-color="#12697B"/></linearGradient><radialGradient id="halo"><stop stop-color="#61767A" stop-opacity=".14"/><stop offset="1" stop-color="#61767A" stop-opacity="0"/></radialGradient></defs>
-<circle cx="275" cy="178" r="170" fill="url(#halo)"/><circle cx="275" cy="178" class="schematic-ring" r="135" stroke="#12697B" stroke-width="1" fill="none" stroke-dasharray="3 7"/><circle cx="275" cy="178" r="90" stroke="#7C9EA0" fill="none"/>
-<path d="M276 178 L105 76 M276 178 L450 75 M276 178 L105 286 M276 178 L446 285" stroke="#61767A" stroke-width="1.7" opacity=".65" class="story-links" pathLength="1"/>
-<g class="floater"><rect x="194" y="132" rx="15" width="162" height="91" fill="#12697B" stroke="#61767A" stroke-width="1.5"/><text x="275" y="164" fill="#FFFBF3" font-family="DM Mono,monospace" font-size="12" text-anchor="middle">AGENT</text><text x="275" y="190" fill="#DAE7E3" font-family="DM Mono,monospace" font-size="10" text-anchor="middle">plan · act · observe</text><circle cx="275" cy="210" r="3.5" fill="#12697B" class="pulse"/></g>
-<g class="schematic-node"><rect x="36" y="42" width="144" height="63" rx="8" fill="#19353D" stroke="#12697B"/><text x="51" y="64" fill="#DAE7E3" font-family="DM Mono,monospace" font-size="9">01 / TOOL</text><text x="51" y="86" fill="#FFFBF3" font-family="DM Sans,sans-serif" font-size="14" font-weight="700">Code sandbox</text></g>
-<g class="schematic-node"><rect x="373" y="42" width="144" height="63" rx="8" fill="#19353D" stroke="#12697B"/><text x="387" y="64" fill="#DAE7E3" font-family="DM Mono,monospace" font-size="9">02 / TOOL</text><text x="387" y="86" fill="#FFFBF3" font-family="DM Sans,sans-serif" font-size="14" font-weight="700">Test runner</text></g>
-<g class="schematic-node"><rect x="36" y="256" width="144" height="63" rx="8" fill="#19353D" stroke="#12697B"/><text x="51" y="279" fill="#DAE7E3" font-family="DM Mono,monospace" font-size="9">03 / TOOL</text><text x="51" y="299" fill="#FFFBF3" font-family="DM Sans,sans-serif" font-size="14" font-weight="700">Trace store</text></g>
-<g class="schematic-node"><rect x="373" y="256" width="144" height="63" rx="8" fill="#EFE5D7" stroke="#12697B"/><text x="387" y="279" fill="#12697B" font-family="DM Mono,monospace" font-size="9">04 / CHECK</text><text x="387" y="299" fill="#19353D" font-family="DM Sans,sans-serif" font-size="14" font-weight="700">State verifier</text></g>
-<circle cx="216" cy="145" r="5" fill="#12697B" class="pulse"/><circle cx="336" cy="145" r="5" fill="#E4B56D" class="pulse"/><circle cx="344" cy="204" r="5" fill="#12697B" class="pulse"/><circle cx="208" cy="204" r="5" fill="#E4B56D" class="pulse"/>
-</svg></div><div class="viz-footer"><span>AGENT → TOOLS → WORLD STATE</span><strong>VERIFY WHAT CHANGED ↗</strong></div></div></div></section>
+<section class="hero"><div class="container hero-grid"><div class="hero-copy"><div class="eyebrow">Independent applied AI research initiative</div><h1>Intelligence needs <em>a world</em> to learn from.</h1><p class="lede">As AI moves from answering questions to taking actions, we need better ways to understand its behavior. Sohjhro explores simulation environments, verifiable evaluation and the engineering foundations of reliable agents.</p><div class="hero-actions"><a class="btn" href="/research/">Explore our research thesis <span aria-hidden="true">↗</span></a><a class="btn secondary" href="/worlds/">Discover Worlds concept <span aria-hidden="true">→</span></a></div><div class="small-trust"><span class="status-orb" aria-hidden="true"></span> EARLY-STAGE INITIATIVE · RESEARCH DIRECTIONS IN EXPLORATION</div></div><div class="signal-stage" role="img" aria-label="Concept illustration of an AI agent execution trace. A scroll-progressive signal shows recorded actions, observed state changes and an independent verification checkpoint. Not real experiment results.">
+  <div class="signal-topline"><span>SOHJHRO / BEHAVIORAL TRACE</span><span class="signal-concept"><i aria-hidden="true"></i> CONCEPT STUDY</span></div>
+  <svg class="signal-canvas" viewBox="0 0 620 440" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="heroSignalGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#61767A"/><stop offset="45%" stop-color="#12697B"/><stop offset="100%" stop-color="#E4B56D"/>
+      </linearGradient>
+      <linearGradient id="heroSignalWash" x1="0%" y1="100%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#12697B" stop-opacity="0"/><stop offset="65%" stop-color="#12697B" stop-opacity=".1"/><stop offset="100%" stop-color="#E4B56D" stop-opacity=".13"/>
+      </linearGradient>
+      <radialGradient id="heroSignalHalo">
+        <stop offset="0%" stop-color="#E4B56D" stop-opacity=".19"/><stop offset="100%" stop-color="#E4B56D" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <circle cx="422" cy="188" r="205" fill="url(#heroSignalHalo)"/>
+    <g class="signal-grid" fill="none" stroke="#12697B" stroke-width="1">
+      <path d="M34 102 H594 M34 169 H594 M34 236 H594 M34 303 H594 M34 370 H594"/>
+      <path d="M84 69 V390 M196 69 V390 M308 69 V390 M420 69 V390 M532 69 V390"/>
+    </g>
+    <g class="signal-axis" fill="#61767A" font-family="DM Mono,monospace" font-size="10">
+      <text x="34" y="67">EXECUTION TRACE / t</text>
+      <text x="34" y="406">OBSERVABLE STATE</text>
+      <text x="594" y="406" text-anchor="end">INDEPENDENT CHECK</text>
+    </g>
+    <path d="M35 320 C83 319 109 248 158 260 S238 346 286 288 S365 177 407 208 S491 282 540 165 S575 135 590 140" fill="none" stroke="#12697B" stroke-width="22" opacity=".05" stroke-linecap="round"/>
+    <path d="M35 320 C83 319 109 248 158 260 S238 346 286 288 S365 177 407 208 S491 282 540 165 S575 135 590 140" fill="none" stroke="#8BABA8" stroke-width="1.5" stroke-dasharray="3 8" opacity=".77"/>
+    <path class="signal-main-line" pathLength="1000" d="M35 320 C83 319 109 248 158 260 S238 346 286 288 S365 177 407 208 S491 282 540 165 S575 135 590 140" fill="none" stroke="url(#heroSignalGradient)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path class="signal-echo" d="M35 350 C100 344 133 300 174 308 S245 370 287 331 S371 211 421 249 S507 297 557 212 S583 186 590 186" fill="none" stroke="#12697B" stroke-width="1.4" opacity=".19" stroke-linecap="round"/>
+    <path class="signal-echo signal-echo-two" d="M35 285 C95 277 137 202 179 223 S248 304 286 247 S372 130 419 162 S506 229 548 115 S581 92 590 94" fill="none" stroke="#E4B56D" stroke-width="1.4" opacity=".31" stroke-linecap="round"/>
+    <path d="M84 320 V370 M308 274 V370 M540 164 V370" stroke="#61767A" stroke-width="1" stroke-dasharray="3 6" opacity=".6"/>
+    <g class="signal-event-labels" fill="#19353D" font-family="DM Mono,monospace" font-size="10" letter-spacing="1">
+      <text x="84" y="384" text-anchor="middle">ACTION</text>
+      <text x="308" y="384" text-anchor="middle">STATE</text>
+      <text x="540" y="384" text-anchor="middle">CHECK</text>
+    </g>
+    <circle class="signal-progress-ring" cx="35" cy="320" r="14" fill="#E4B56D" opacity=".15"/>
+    <circle class="signal-progress-dot" cx="35" cy="320" r="5.5" fill="#E4B56D" stroke="#FFFBF3" stroke-width="2"/>
+    <g class="signal-pass">
+      <circle cx="566" cy="85" r="19" fill="#DCEBE6" stroke="#12697B" stroke-width="1.3"/>
+      <path d="M556 85 L563 91 L577 77" stroke="#12697B" stroke-width="2.9" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
+      <text x="566" y="121" font-family="DM Mono,monospace" font-size="10" text-anchor="middle" fill="#12697B">CHECKED</text>
+    </g>
+    <g class="signal-crosshair" stroke="#12697B" stroke-width="1.3" opacity=".6">
+      <path d="M308 215 V230 M300 223 H315"/>
+      <circle cx="308" cy="223" r="16" fill="none" stroke-dasharray="2 4"/>
+    </g>
+  </svg>
+  <div class="signal-bottomline">
+    <span><b>01</b> AGENT ACTION</span>
+    <span><b>02</b> STATE DIFF</span>
+    <span><b>03</b> EVIDENCE CHECK</span>
+  </div>
+  <p class="signal-fineprint">From intent to observable evidence · illustrative, not a live benchmark</p>
+</div></section>
 <div class="ticker"><div class="container ticker-grid"><div class="ticker-item"><span class="ticker-index">01</span><b>Agent behavior</b></div><div class="ticker-item"><span class="ticker-index">02</span><b>Simulated environments</b></div><div class="ticker-item"><span class="ticker-index">03</span><b>Verifiable evaluation</b></div><div class="ticker-item"><span class="ticker-index">04</span><b>Applied engineering</b></div></div></div>
 <section class="section"><div class="container"><div class="section-head"><div class="eyebrow">The question behind our work</div><h2>What does it take for an AI system to <span class="lead-mark">act reliably?</span></h2><p>Better models matter. But agents also need to handle changing information, permissions, external tools and the consequences of their actions. We are interested in the systems that make those behaviors testable.</p></div><div class="grid-3">
 <article class="research-card"><div class="card-top"><span>RESEARCH / 01</span><span class="card-glyph" aria-hidden="true">◎</span></div><h3>Worlds that respond</h3><p>Executable environments where tool calls create persistent, observable changes across connected software systems.</p><div class="card-foot"><a href="/research/#stateful">STATEFUL SIMULATION ↗</a></div></article>
