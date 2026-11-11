@@ -1,27 +1,24 @@
-# Sohjhro identity — Folded Worlds
+# Sohjhro identity — Folded Worlds / Sandstone & Petrol
 
-## Rationale
-The abstract folded **S** stands for **Sohjhro**. Its overlapping ribbons reflect connected simulated worlds, state changes, iteration, and the translation of research into tools and products. It is a visual metaphor, not a diagram or claim about a released product.
+The folded S reflects connected worlds, observable state transitions, and the translation of research into reliable engineering.
 
-## Assets
-- `public/logo-mark.svg` — scalable primary mark, transparent background; suitable for web, documentation and light/dark settings after contrast checks.
-- `public/favicon.svg` — 64 × 64 dark tile with the folded-S mark for browser tabs and bookmarks.
-- Header and footer combine the SVG mark with the accessible text wordmark `sohjhro.`.
+## Design tokens
 
-## Palette
-- **Iris** `#9C85FF` — upper ribbon / exploration.
-- **Indigo** `#6455F5` — structural continuity.
-- **Blue** `#4577F4` — connected workflows.
-- **Cyan** `#10C6E8` — verifiability / insight.
-- **Ink** `#0C1420` — favicon background.
+- Background: `#F5EFE3` — Sandstone
+- Surface: `#FFFBF3` — Porcelain cream
+- Text: `#19353D` — Deep petrol ink
+- Muted: `#61767A` — Slate teal
+- Primary: `#12697B` — Petrol
+- Secondary: `#E4B56D` — Warm gold
+- Border: `#D8CCBA` — Soft sandstone outline
 
-The broader website still uses lime accent `#C9FA87` for action elements. Do not change that palette as an incidental logo adjustment.
+## Assets and application
+
+- `public/logo-mark.svg`: transparent folded-S brand mark in petrol and gold.
+- `public/favicon.svg` and `app/icon.svg`: folded-S on sandstone tile.
+- Browser icon uses versioned SVG metadata; old ICO remains a legacy fallback asset only.
+- Design is applied consistently in CSS tokens, section surfaces, diagrams, panels, links and buttons.
 
 ## Usage
-Keep the symbol's aspect ratio, give it adequate breathing room, and avoid placing it over detailed imagery. The wordmark should be written **Sohjhro** or **sohjhro.**. Avoid adding unverified business claims to logo lockups.
 
-## Accessibility and collaboration
-In text links, provide an accessible brand name; the decorative icon itself uses empty alt text. Review logo distinctiveness and trademark availability before treating the identity as registered or exclusive. These SVGs are original Sohjhro design assets, based on an exploration of layered geometry.
-
-## Website colors (2026 update)
-Website surfaces now share the logo's violet-to-cyan identity: primary iris `#9C85FF`, supporting sky/cyan `#46D0F1`, deep navy `#090D1E`, and light lavender canvas `#F1F3FF`. The original green accents have been replaced, including inline research schematics. Browser favicons are shipped as `/favicon.svg`, an ICO fallback at `/favicon.ico`, and Next.js app icon metadata; versioned links refresh existing browser caches.
+Use petrol for interactive primary actions and gold for secondary emphasis and diagram trace markers, not for small text on sandstone. Use deep petrol for headings and body text. Preserve readable focus indicators and keep visual diagrams informative with text labels, not color alone.
