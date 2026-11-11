@@ -22,3 +22,6 @@ Keep the symbol's aspect ratio, give it adequate breathing room, and avoid placi
 
 ## Accessibility and collaboration
 In text links, provide an accessible brand name; the decorative icon itself uses empty alt text. Review logo distinctiveness and trademark availability before treating the identity as registered or exclusive. These SVGs are original Sohjhro design assets, based on an exploration of layered geometry.
+
+## Website colors (2026 update)
+Website surfaces now share the logo's violet-to-cyan identity: primary iris `#9C85FF`, supporting sky/cyan `#46D0F1`, deep navy `#090D1E`, and light lavender canvas `#F1F3FF`. The original green accents have been replaced, including inline research schematics. Browser favicons are shipped as `/favicon.svg`, an ICO fallback at `/favicon.ico`, and Next.js app icon metadata; versioned links refresh existing browser caches.
