@@ -53,7 +53,7 @@ export const content = `
     <span><b>03</b> EVIDENCE CHECK</span>
   </div>
   <p class="signal-fineprint">From intent to observable evidence · illustrative, not a live benchmark</p>
-</div></div></div></section>
+</div></div></section>
 <div class="ticker"><div class="container ticker-grid"><div class="ticker-item"><span class="ticker-index">01</span><b>Agent behavior</b></div><div class="ticker-item"><span class="ticker-index">02</span><b>Simulated environments</b></div><div class="ticker-item"><span class="ticker-index">03</span><b>Verifiable evaluation</b></div><div class="ticker-item"><span class="ticker-index">04</span><b>Applied engineering</b></div></div></div>
 <section class="section"><div class="container"><div class="section-head"><div class="eyebrow">The question behind our work</div><h2>What does it take for an AI system to <span class="lead-mark">act reliably?</span></h2><p>Better models matter. But agents also need to handle changing information, permissions, external tools and the consequences of their actions. We are interested in the systems that make those behaviors testable.</p></div><div class="grid-3">
 <article class="research-card"><div class="card-top"><span>RESEARCH / 01</span><span class="card-glyph" aria-hidden="true">◎</span></div><h3>Worlds that respond</h3><p>Executable environments where tool calls create persistent, observable changes across connected software systems.</p><div class="card-foot"><a href="/research/#stateful">STATEFUL SIMULATION ↗</a></div></article>
