@@ -27,17 +27,25 @@ export function ScrollMotion() {
       observer.observe(target);
     });
     const hero = document.querySelector<HTMLElement>(".hero");
-    const links = hero?.querySelector<SVGPathElement>(".story-links");
+    const trace = hero?.querySelector<SVGPathElement>(".signal-main-line");
+    const dot = hero?.querySelector<SVGCircleElement>(".signal-progress-dot");
+    const halo = hero?.querySelector<SVGCircleElement>(".signal-progress-ring");
+    const stage = hero?.querySelector<HTMLElement>(".signal-stage");
     let frame=0;
     const draw=() => {
       frame=0;
-      if (!hero || !links) return;
-      const progress=Math.max(.18, Math.min(1, window.scrollY / Math.max(1, hero.offsetHeight*.65)));
-      links.style.strokeDashoffset=String(1-progress);
+      if (!hero || !trace) return;
+      const progress=Math.max(.40, Math.min(1, .40 + window.scrollY / Math.max(1, hero.offsetHeight*.75)*.60));
+      trace.style.strokeDashoffset=String(1000*(1-progress));
+      const point=trace.getPointAtLength(trace.getTotalLength()*progress);
+      for (const circle of [dot,halo]) {
+        circle?.setAttribute("cx",String(point.x));
+        circle?.setAttribute("cy",String(point.y));
+      }
+      stage?.setAttribute("data-complete",progress>.97?"true":"false");
     };
     const schedule=() => { if (!frame) frame=window.requestAnimationFrame(draw); };
-    if (links && hero) {
-      hero.classList.add("story-active");
+    if (trace && hero) {
       draw();
       window.addEventListener("scroll",schedule,{passive:true});
       window.addEventListener("resize",schedule);
