@@ -7,7 +7,7 @@ export const metadata: Metadata = {
  description:"Sohjhro explores stateful agent environments, verifiable AI evaluation and applied engineering for intelligent systems.",
  metadataBase:new URL("https://www.sohjhro.com"),
  openGraph:{type:"website",siteName:"Sohjhro",locale:"en_US"},
- icons:{icon:[{url:"/favicon.svg?v=3",sizes:"any",type:"image/svg+xml"},{url:"/favicon.svg?v=3",sizes:"any",type:"image/svg+xml"}],shortcut:"/favicon.svg?v=3"},
+ icons:{icon:[{url:"/favicon.svg?v=4",sizes:"any",type:"image/svg+xml"}],shortcut:"/favicon.svg?v=4"},
 
  robots:{index:true,follow:true},
 };

@@ -15,7 +15,7 @@ The folded S reflects connected worlds, observable state transitions, and the tr
 ## Assets and application
 
 - `public/logo-mark.svg`: transparent folded-S brand mark in petrol and gold.
-- `public/favicon.svg` and `app/icon.svg`: folded-S on sandstone tile.
+- `public/favicon.svg` — transparent folded-S favicon, without an opaque tile (also supplied as `app/icon.svg`).
 - Browser icon uses versioned SVG metadata; old ICO remains a legacy fallback asset only.
 - Design is applied consistently in CSS tokens, section surfaces, diagrams, panels, links and buttons.
 

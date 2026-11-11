@@ -251,3 +251,37 @@ body{background:var(--bg)}
 @media(hover:hover){.related-work-card:hover{transform:translateY(-7px);border-color:#E4B56D;box-shadow:0 23px 48px rgba(25,53,61,.17)}.related-work-card:hover:before{transform:scale(1.2)}}
 @media(max-width:570px){.related-work-card{min-height:245px;padding:25px}.schematic-graphic{width:100%;height:auto}}
 @media(prefers-reduced-motion:reduce){.schematic-graphic .schematic-node,.schematic-graphic .dashline,.schematic-graphic .pulse,.schematic-graphic .schematic-ring,.related-work-card{animation:none!important;transition:none!important}.related-work-card:hover,.schematic-graphic .schematic-node:hover{transform:none!important}}
+
+
+/* Contact page: keep both sections inside the same centered container. */
+.contact-page{background:var(--bg)}
+.contact-options{align-items:stretch}
+.contact-options .contact-method{display:flex;flex-direction:column;padding:clamp(25px,3vw,36px);background:#FFFBF3;border-color:#D8CCBA;border-radius:14px;min-width:0;box-shadow:0 12px 40px rgba(25,53,61,.045)}
+.contact-options .contact-method strong{color:#19353D;line-height:1.25}
+.contact-options .contact-method p{color:#61767A;line-height:1.7}
+.contact-options .contact-method a{color:#12697B;text-underline-offset:4px;text-decoration:underline;font-weight:700}
+.contact-options .contact-method a:hover{color:#0D5260}
+.contact-options .contact-method .fineprint{margin-top:auto;padding-top:15px;font-size:11px;color:#61767A;line-height:1.7}
+.contact-divider{height:1px;background:#D8CCBA;margin:clamp(44px,6vw,70px) 0 clamp(36px,5vw,60px)}
+.contact-guidance{display:grid;grid-template-columns:minmax(0,1.13fr) minmax(0,.87fr);gap:clamp(28px,6vw,86px);align-items:start}
+.contact-guidance-copy{min-width:0}
+.contact-guidance h2{font:700 clamp(34px,3.5vw,52px)/1.13 var(--display);letter-spacing:-.055em;color:#19353D;max-width:15ch;margin:20px 0}
+.contact-guidance-copy>.body-copy{margin:0 0 20px;max-width:620px;color:#61767A;font-size:15px;line-height:1.75}
+.contact-checklist{list-style:none;padding:0;margin:22px 0;display:grid;gap:0}
+.contact-checklist li{display:grid;grid-template-columns:47px minmax(0,1fr);gap:13px;padding:19px 0;border-bottom:1px solid #D8CCBA;align-items:start}
+.contact-checklist li:first-child{border-top:1px solid #D8CCBA}
+.contact-checklist-number{display:inline-flex;align-items:center;justify-content:center;width:35px;height:35px;border:1px solid #B0C9C7;border-radius:10px;background:#E9F1EC;color:#12697B;font:600 11px var(--mono)}
+.contact-checklist strong{display:block;color:#19353D;font:700 17px var(--display);line-height:1.4;margin:0 0 5px}
+.contact-checklist p{margin:0;color:#61767A;font-size:14px;line-height:1.65}
+.contact-privacy-note{margin:22px 0 0;padding:15px 18px;border-left:3px solid #12697B;background:#F0E8DA;border-radius:0 8px 8px 0;color:#395A60;font-size:13px;line-height:1.65}
+.contact-interests{position:relative;overflow:hidden;border-radius:16px;background:#19353D;color:#FFFBF3;padding:clamp(28px,4vw,43px);min-width:0;box-shadow:0 24px 60px rgba(25,53,61,.12)}
+.contact-interests:after{content:"";position:absolute;width:250px;height:250px;right:-140px;top:-140px;background:radial-gradient(circle,rgba(228,181,109,.18),transparent 70%);pointer-events:none}
+.contact-interests-label{display:inline-block;color:#E4B56D;letter-spacing:1.5px;font:500 11px var(--mono)}
+.contact-interests h3{margin:26px 0 22px;color:#FFFBF3;font:700 clamp(32px,3vw,44px)/1.17 var(--display);letter-spacing:-.055em}
+.contact-interests p{margin:0 0 24px;max-width:350px;color:#DAE7E3;line-height:1.75;font-size:14px}
+.contact-interest-tags{display:flex;flex-wrap:wrap;gap:9px}
+.contact-interest-tags span{padding:9px 11px;border:1px solid rgba(255,251,243,.3);border-radius:6px;background:rgba(255,251,243,.065);color:#FFFBF3;font-size:12px;line-height:1.35}
+@media(max-width:860px){.contact-guidance{grid-template-columns:1fr;gap:28px}.contact-interests{max-width:none}.contact-guidance h2{max-width:24ch}}
+@media(max-width:570px){.contact-page{padding-top:56px}.contact-options{gap:14px}.contact-options .contact-method{padding:24px}.contact-divider{margin:40px 0 34px}.contact-guidance h2{font-size:clamp(32px,9vw,42px)}.contact-checklist li{grid-template-columns:38px minmax(0,1fr);gap:10px}.contact-interests{padding:28px}}
+/* The folded-S SVG has no backing layer; don't draw a tile behind it. */
+.site-header .brand-symbol,.site-header .brand-symbol img,.footer-brand img{background:transparent;border:0;box-shadow:none}
